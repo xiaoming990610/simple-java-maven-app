@@ -1,4 +1,9 @@
 pipeline {
+	node{
+		stage('checkout'){
+			checkout scm
+		}
+	}
     agent {
         docker {
             image 'maven:3-alpine'
